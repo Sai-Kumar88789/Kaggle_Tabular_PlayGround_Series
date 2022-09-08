@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div style="color:rgb(219, 226, 231)">
+        <form action="{{ url_for('predict')}}" method="post">
+            <h2>Predictive analysis</h2>
+            <h3>what is the Year?</h3>
+            <input id="first" name="year" type="number ">
+            <h3>What is the month in that Year?(in numbers)</h3><br><input id="second" name="month" required="required">
+            <h3>what is the day in that month?</h3><input id="third" name='day' required="required">
+            <h3>What is the country?</h3><br><select name="country" id="country" required="required">
+                <option value="Belgium">Belgium</option>
+                <option value="France">France</option>
+                <option value="Germany">Germany</option>
+                <option value="Italy">Italy</option>
+                <option value="Poland">Poland</option>
+                <option value="Spain">Spain</option>
+            </select>
+            <h3>which store?</h3><br><select name="store" id="store" required="required">
+                <option value="KaggleMart">KaggleMart</option>
+                <option value="KaggleRama">KaggleRama</option>
+            </select>
+            <h3>what is the product?</h3><br><select name="product" id="product" required="required">
+                <option value="KaggleAdvancedTechniques">Kaggle Advanced Techniques</option>
+                <option value="KaggleGettingStarted">Kaggle Getting Started</option>
+                <option value="KaggleRecipeBook">Kaggle Recipe Book</option>
+                <option value="KaggleforKids">Kaggle for Kids:One Smart Goose</option>
+                
+            </select>
+            <br><br><button id="sub" type="submit ">Calculate the num_sold</button>
+            <br>
+
+
+
+
+        </form>
+
+
+
+        <br><br>
+        <h3>{{ prediction_text }}
+            <h3>
+    </div>
+
+
+
+
+    <style>
+        body {
+            background-color: rgb(0, 0, 0);
+            text-align: center;
+            padding: 0px;
+        }
+        
+        #research {
+            font-size: 18px;
+            width: 100px;
+            height: 23px;
+            top: 23px;
+        }
+        
+        #box {
+            border-radius: 60px;
+            border-color: 45px;
+            border-style: solid;
+            font-family: cursive;
+            text-align: center;
+            background-color: rgb(168, 131, 61);
+            font-size: medium;
+            position: absolute;
+            width: 700px;
+            bottom: 9%;
+            height: 850px;
+            right: 30%;
+            padding: 0px;
+            margin: 0px;
+            font-size: 14px;
+        }
+        
+        #fuel {
+            width: 83px;
+            height: 43px;
+            text-align: center;
+            border-radius: 14px;
+            font-size: 20px;
+        }
+        
+        #fuel:hover {
+            background-color: coral;
+        }
+        
+        #research {
+            width: 99px;
+            height: 43px;
+            text-align: center;
+            border-radius: 14px;
+            font-size: 18px;
+        }
+        
+        #research:hover {
+            background-color: coral;
+        }
+        
+        #resea {
+            width: 99px;
+            height: 43px;
+            text-align: center;
+            border-radius: 14px;
+            font-size: 18px;
+        }
+        
+        #resea:hover {
+            background-color: coral;
+        }
+        
+        #sub {
+            width: 120px;
+            height: 43px;
+            text-align: center;
+            border-radius: 14px;
+            font-size: 18px;
+        }
+        
+        #sub:hover {
+            background-color: darkcyan;
+        }
+        
+        #first {
+            border-radius: 14px;
+            height: 25px;
+            font-size: 20px;
+            text-align: center;
+        }
+        
+        #second {
+            border-radius: 14px;
+            height: 25px;
+            font-size: 20px;
+            text-align: center;
+        }
+        
+        #third {
+            border-radius: 14px;
+            height: 25px;
+            font-size: 20px;
+            text-align: center;
+        }
+        
+        #fourth {
+            border-radius: 14px;
+            height: 25px;
+            font-size: 20px;
+            text-align: center;
+        }
+    </style>
+</body>
+
+</html>
